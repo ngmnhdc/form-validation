@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Embed font Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="signup">
+        <h3 class="signup-heading">Create an account</h3>
+        <a href="#" class="signup-google">
+            <img class="signup-google-icon" src="https://img.icons8.com/color/452/google-logo.png"></img>
+            <span class="signup-google-text">Sign up with Google</span>
+        </a>
+        <a href="#" class="signup-facebook">
+            <i class="fab fa-facebook signup-facebook-icon"></i>
+            <span class="signup-facebook-text">Sign up with Facebook</span>
+        </a>
+        <div class="signup-or">
+            <span class="signup-or-text">Or</span>
+        </div>
+        <form action="" method="POST" class="signup-form" id="form-1">
+            <div class="form-group invalid">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Eg. David Daviron" class="form-control">
+                <span class="form-message">Test message</span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" id="email" name="email" placeholder="Eg. example@email.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password" class="form-label">Confirm password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <button class="form-submit">Sign Up</button>
+            <p class="description">Aldready have an account? <a href="">Sign in</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
