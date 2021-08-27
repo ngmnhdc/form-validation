@@ -30,10 +30,10 @@
             <span class="signup-or-text">Or</span>
         </div>
         <form action="" method="POST" class="signup-form" id="form-1">
-            <div class="form-group invalid">
+            <div class="form-group">
                 <label for="fullname" class="form-label">Full Name</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Eg. David Daviron" class="form-control">
-                <span class="form-message">Test message</span>
+                <span class="form-message"></span>
             </div>
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
@@ -54,6 +54,28 @@
             <p class="description">Aldready have an account? <a href="">Sign in</a></p>
         </form>
     </div>
+    <script type="text/javascript" src="./validator.js"></script>
+    <script>
+        // Expecting
+        Validator({
+            form: '#form-1',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname'),
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email'),
+                Validator.isRequired('#password'),
+                Validator.minLength('#password', 6),
+                Validator.isRequired('#confirm-password'),
+                Validator.isConfirmed('#confirm-password', function() {
+                    return document.querySelector('#form-1 #password').value
+                }, '')
+            ],
+            onSubmit: function(data) {
+                console.log(data)
+            }
+        })
+    </script>
 </body>
 
 </html>
